@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--dark-grey: hsl(0, 0%, 59%);
+	--dark-cyan: hsl(185, 75%, 39%);
+	--dark-blue: hsl(229, 23%, 23%);
+	--grey-blue: hsl(227, 10%, 46%);
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+}
+.container-wrapper {
+	height: 100%;
+	width: 100%;
+	background-color: hsl(185, 75%, 39%);
+	overflow: hidden;
+	position: relative;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	box-sizing: border-box;
+}
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-175px, -350px);
+	height: 400px;
+	width: 350px;
+	background-color: white;
+	margin: 10% auto 0;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 5px 5px 100px var(--dark-blue);
+	z-index: 2;
+}
+.bg {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	display: flex;
+	z-index: 1;
+}
+.bg-top {
+	height: 100%;
+	width: 50%;
+	background: url('images/bg-pattern-top.svg') no-repeat 100% 200%;
+}
+.bg-bottom {
+	height: 100%;
+	width: 50%;
+	background: url('images/bg-pattern-bottom.svg') no-repeat 0% -150%;
+}
+.cover {
+	flex: 3;
+	border-radius: 10px 10px 0 0;
+}
+.card-top {
+	height: 45%;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+	background-image: url('images/bg-pattern-card.svg');
+	background-size: 100% 100%;
+}
+.profile-picture {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: orange;
+	top: 0;
+	left: 0;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50px, -50px);
+	border: 5px solid white;
+	background-image: url('images/image-victor.jpg');
+	background-size: 100% 100%;
+}
+.name {
+	text-align: center;
+	margin: 20% auto;
+}
+.name > p {
+	font-weight: 700;
+}
+.name > p + p {
+	font-weight: 400;
+	color: var(--dark-grey);
+	font-size: 0.8rem;
+}
+.name > p > span {
+	margin-left: 5px;
+	color: var(--dark-grey);
+}
+.description {
+	flex: 1;
+}
+
+.flex-row {
+	height: 40%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.flex-column {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-column > span {
+	font-weight: 700;
+}
+.flex-column > span + span {
+	font-weight: 400;
+	color: var(--dark-grey);
+	font-size: 0.8rem;
+}
+
+.footer {
+	visibility: hidden;
+}
